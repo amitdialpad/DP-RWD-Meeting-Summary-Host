@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Meeting Summary Host View</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <!-- logo here -->
+                <img src="img/logo.svg" alt="Logo" />
+            </div>
+            <div class="logout-button">Log Out</div>
+        </div>
+    </header>
+    <!-- End of header -->
+
+    <main>
+        <div class="container">
+            <div class="title">  
+                
+                    <div class="title-content">
+                        <span class="call-heading">Follow up - Remote screen share design review</span>
+                        <span class="call-subheading">
+                            November 10, 2024 9:00 – 10:02 AM . Duration: 62min
+                        </span>
+                    </div> <!--title content ends here-->
+
+                    <div class="actions">
+                            <button id="ShareButton" class="share-button">
+                                <img src="img/share-icon-light.svg" alt="Share Icon" class="icon" />
+                            </button>
+
+
+                            <img id="moreIcon" class="more-icon" src="img/more.svg" />
+                            <div id="iconContainer" class="icon-container">
+                                <div class="action-option">
+                                    <img src="img/download-icon.svg" alt="Download Icon" class="icon-download-audio" style="cursor: pointer" />
+                                    <span class="icon-copy">Download Recording</span>
+                                </div>
+
+                                <div class="action-option">
+                                    <img src="img/download-csv.svg" alt="Download Icon" class="icon-download-transcript" style="cursor: pointer"/>
+                                    <span class="icon-copy" >Download Transcript</span>
+                                </div>
+
+
+                                <!--
+                                <div class="action-option">
+                                    <img src="img/download-icon.svg" alt="Download Icon" class="icon-easy-read" style="cursor: pointer" />
+                                    <span class="icon-copy">Easy Read Transcript</span>
+                                </div>
+                                -->
+                                <!-- added this option to recap for better visibility-->
+
+                                <div class="action-option">
+                                    <img src="img/copy-icon.svg" alt="Copy Icon" class="icon-copy-recap" style="cursor: pointer" />
+                                    <span class="icon-copy" >Copy Recap</span>
+                                </div>
+
+                                <div class="action-option">
+                                    <img src="img/playlist.svg" alt="Playlist Icon" class="icon-add-playlist" style="cursor: pointer" />
+                                    <span class="icon-copy icon-copy-playlist">Add to Playlist</span>
+                                </div>
+
+                                <div class="action-option action-option-share">
+                                     <img src="img/share-icon-light.svg" alt="Share Icon" class="icon-share" style="cursor: pointer" />
+                                      <span class="icon-copy icon-copy-share">Share</span>
+                                 </div>
+                            </div> <!--icon container ends here-->
+                        </div> <!--actions end here-->
+            </div> <!-- title ends here -->
+            
+            <div class="meeting-video">
+                <video id="meetingVideo" controls>
+                <source src="video/sample-meeting.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video> <!-- video player ends here-->
+            </div> <!-- meeting video ends here -->
+
+
+                    <section class="grid-for-web">
+
+                        
+                        <section class="main-content">
+                     <div class="tab-bar">
+                            <div class="tab active recap-tab" id="recapTab">
+                            Ai Recap
+                            </div>
+
+                            <div class="tab transcript-tab" id="transcriptTab">
+                            Transcript & Moments
+                            <span class="tab-number">20</span>
+                            </div>
+
+                            <div class="tab quality-tab" id="qualityTab">
+                            Chat log
+                            </div>
+
+                            <div class="tab details-tab" id="detailsTab">
+                            Details
+                            </div>
+                        
+                    </div> <!-- tab bar ends here -->
+                    
+
+                    <div class="tab-content-recap">
+                        <div class="recap-content" id="recapContent">
+                            <p>During the call, Mr. Tucker and Mr. Benjamin discussed several strategic initiatives to enhance the growth and competitive edge of their company. Mr. Benjamin highlighted the importance of expanding into new markets, particularly in Southeast Asia, to capitalize on the region's burgeoning tech industry. Mr. Tucker agreed and suggested forming partnerships with local firms to ease the transition and ensure compliance with regional regulations. They also reviewed the progress of the ongoing AI-driven product development, with Mr. Benjamin emphasizing the need for accelerated timelines. Additionally, they touched upon improving the company’s sustainability practices to align with global environmental standards. Mr. Tucker proposed conducting a comprehensive audit of current processes to identify areas for improvement. Both agreed that employee training programs should be enhanced to equip the workforce with the necessary skills to adapt to new technologies.
+
+                            </p>
+                            <h4>Action Items</h4>
+                            <ul class="action-items-list">
+                                <li>Develop a detailed plan for entering Southeast Asian markets, including potential local partners and regulatory requirements.</li>
+                                <li>Accelerate the timeline for AI-driven product development and set up bi-weekly progress review meetings.</li>
+                                <li>Conduct a comprehensive sustainability audit to identify and address areas where the company can improve its environmental practices.</li>
+                                <li>Enhance and expand training programs to ensure employees are well-equipped with skills for new technologies.</li>
+                                <li>Identify and reach out to potential partners in Southeast Asia to facilitate smooth market entry and collaboration.</li>
+                        
+                            </ul>
+                        </div>
+                    </div> <!-- tab-content-recap ends here -->
+
+                    <div class="tab-content-transcript">    
+                    <div class="transcript-content" id="transcriptContent">
+                        <div class="transcript-header">
+                        <span class="helper-text">Filter by</span>
+                    
+                        <!-- Add an id to the list1 element -->
+                        <div id="list1" class="dropdown-check-list" tabindex="1">
+                           <!--  <span class="helper-text">Filter by</span> -->
+                            
+                            <span class="anchor">Moments <img class="arrow-down" src="img/arrow-down.svg"/></span>
+                            <ul class="items">
+                                <label><li id="handleCheckboxChange" name="option1"><input type="checkbox"/>Action items (1) </li></label>
+                                <label><li id="handleCheckboxChange" name="option2"><input type="checkbox" />Interesting Questions (1)</li></label>
+                                <label><li id="handleCheckboxChange" name="option3"><input type="checkbox" />Positive sentiments (1) </li></label>
+                                <label><li id="handleCheckboxChange" name="option4"><input type="checkbox" />Negative Sentiments (1) </li></label>
+                                <label><li id="handleCheckboxChange" name="option5"><input type="checkbox" />Currency (1) </li></label>
+                                 <!--<label><li id="handleCheckboxChange" name="option6"><input type="checkbox" />Questions (9) </li></label>
+                                <label><li id="handleCheckboxChange" name="option7"><input type="checkbox" />Currency (1)</li></label> -->
+                            </ul>
+                            
+                            <div id="selectedOptionsContainer" class="selected-options-container"></div>
+                            
+                        </div>
+
+                        <!-- Add an id to the list1 element -->
+                        <div id="list2" class="dropdown-check-list" tabindex="1">
+                            <!--  <span class="helper-text">Filter by</span> -->
+                             
+                             <span class="anchor">Participants <img class="arrow-down" src="img/arrow-down.svg"/></span>
+                             <ul class="items">
+                                <li id="handleCheckboxChange" name="option1"><label><input type="checkbox"/>Action items (1) </label></li>
+                                <li id="handleCheckboxChange" name="option2"><label><input type="checkbox" />Interesting Question (1)</label></li>
+                                <li id="handleCheckboxChange" name="option3"><label><input type="checkbox" />Negative-sentiments (1) </label></li>
+                                <li id="handleCheckboxChange" name="option4"><label><input type="checkbox" />Swearing (2) </label></li>
+                                <li id="handleCheckboxChange" name="option5"><label><input type="checkbox" />Currency (1) </label></li>
+                                <li id="handleCheckboxChange" name="option6"><label><input type="checkbox"  />Questions (9) </label></li>
+                                <li id="handleCheckboxChange" name="option7"><label><input type="checkbox" />Date (3)</label></li>
+                            </ul>
+                             
+                             <div id="selectedOptionsContainer" class="selected-options-container"></div>
+                             
+                         </div>
+                         <a href="#" id="resetFilterLink">Reset Filters</a>
+
+                        </div> <!-- transcript header ends here -->
+                                                
+                        <div class="meeting-recap">
+                            <div class="moments">
+                                <div class="moment action-item-moment" name="action-item1" data-moment="option1"> 
+                                    <div class="tag tag-action-item">Action Item</div>
+
+                                    <div class="speaker">
+                                        <div class="speaker-name">Jane Doe</div>
+                                        <div class="time">01:35</div>
+                                    </div>
+                                    <div class="text">We need to follow up on the client's request.</div>
+                                </div>
+
+                                <div class="moment interesting-questions" data-moment="option2">
+                                    <div class="speaker">
+                                        <div class="speaker-name">Mark Johnson</div>
+                                        <div class="time">05:30</div>
+                                        <div class="tag tag-interesting-question">Interesting Question</div>
+                                    </div>
+                                    <div class="text">Can you explain how the new feature works?</div>
+                                </div>
+
+                                <div class="moment positive-sentiments" data-moment="option3">
+                                    <div class="speaker">
+                                        <div class="speaker-name">Emily Smith</div>
+                                        <div class="time">07:30</div>
+                                        <div class="tag tag-positive-sentiment">Positive Sentiment</div>
+                                    </div>
+                                    <div class="text">I really like the design of the UI.</div>
+                                </div>
+
+                                <div class="moment negative-sentiments" data-moment="option4">
+                                    <div class="speaker">
+                                        <div class="speaker-name">Alex Johnson</div>
+                                        <div class="time">09:30</div>
+                                        <div class="tag tag-negative-sentiment">Negative Sentiment</div>
+                                    </div>
+                                    <div class="text">I think the performance could be improved.</div>
+                                </div>
+
+                                <div class="moment currency" data-moment="option5">
+                                    <div class="speaker">
+                                        <div class="speaker-name">Sarah Davis</div>
+                                        <div class="time">00:30</div>
+                                        <div class="tag tag-currency">Currency</div>
+                                    </div>
+                                    <div class="text">The total cost is $1000.</div>
+                                </div>
+
+                                </div>
+                          
+                            <!-- meeting moments ends here -->
+
+                            <!-- meeting transcript starts here -->
+                            <div class="meeting-transcript">
+
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 2">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Mark Johnson</div>
+                                            <div class="time">00:20</div>
+                                        </div>
+                                        <div class="text">Good morning, everyone. Let's kick off our daily stand-up
+                                            meeting. Marcus, could you start by updating us on your progress from
+                                            yesterday?
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">00:30</div>
+                                        </div>
+                                        <div class="text">I just want to take a moment to express my genuine
+                                            appreciation for the effort and creativity put into these designs. It's
+                                            evident that a lot of thought and dedication went into crafting them, and I
+                                            truly believe they reflect the high standards we strive for as a team.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">00:42</div>
+                                        </div>
+                                        <div class="text">That sounds great, Marcus. Did you encounter any challenges?
+                                            If yes, please start by listing those one by one</div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user1.png" alt="Person 1">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">00:53</div>
+                                        </div>
+                                        <div class="text">No, nothing major. All is well.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">01:21</div>
+                                        </div>
+                                        <div class="text">Good to hear. Sophia, how about you? Status report is due this
+                                            week on Friday.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item" data-moment="option1">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 2">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">01:35</div><span class="tag-action-item">Action Item</span>
+                                        </div>
+                                        <div class="text">We need to follow up on the client's request. I completed the initial drafts for the new logo designs we
+                                            discussed last week. I've sent them over for feedback, so I'm waiting to
+                                            hear back from the stakeholders.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user1.png" alt="Person 1">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">01:54</div>
+                                        </div>
+                                        <div class="text">That's awesome, Sophia. I'm excited to see the new concepts.
+                                            As for me, I spent most of yesterday refining the UI components library
+                                            based on the feedback we received during the last sprint review.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">02:20</div>
+                                        </div>
+                                        <div class="text">Excellent work, Liam. It's crucial to keep our design system
+                                            updated and consistent. How about you, Emily? Any updates on the user
+                                            testing?
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">02:51</div>
+                                        </div>
+                                        <div class="text">I just want to take a moment to express my genuine
+                                            appreciation for the effort and creativity put into these designs. It's
+                                            evident that a lot of thought and dedication went into crafting them, and I
+                                            truly believe they reflect the high standards we strive for as a team.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 2">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">03:30</div>
+                                        </div>
+                                        <div class="text">I just want to take a moment to express my genuine
+                                            appreciation for the effort and creativity put into these designs. It's
+                                            evident that a lot of thought and dedication went into crafting them, and I
+                                            truly believe they reflect the high standards we strive for as a team.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">04:31</div>
+                                        </div>
+                                        <div class="text">I just want to take a moment to express my genuine
+                                            appreciation for the effort and creativity put into these designs. It's
+                                            evident that a lot of thought and dedication went into crafting them, and I
+                                            truly believe they reflect the high standards we strive for as a team.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">04:43</div>
+                                        </div>
+                                        <div class="text">I just want to take a moment to express my genuine
+                                            appreciation for the effort and creativity put into these designs. It's
+                                            evident that a lot of thought and dedication went into crafting them, and I
+                                            truly believe they reflect the high standards we strive for as a team.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item" data-moment="option2">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 2">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Mark Johnson</div>
+                                            <div class="time">05:30</div><span class="tag-interesting-question">Interesting Question</span>
+                                        </div>
+                                        <div class="text">Can you explain how the new feature works? I'm looking forward to the
+                                            user testing results. Michael, how about you? Any updates on the backend
+                                            development?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user1.png" alt="Person 1">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">05:57</div>
+                                        </div>
+                                        <div class="text">Great. Let's keep up the momentum and tackle today's tasks. If
+                                            anyone encounters any issues, don't hesitate to reach out for support. Our
+                                            collaboration is key to our success. Let's make today another productive
+                                            day. Meeting adjourned.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 4">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">John Smith</div>
+                                            <div class="time">06:15</div>
+                                        </div>
+                                        <div class="text">I wanted to share some exciting news. Our project just got
+                                            approved for additional funding. This means we can expand our team and
+                                            accelerate the development process. Great job, everyone!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 2">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Mark Johnson</div>
+                                            <div class="time">06:45</div>
+                                        </div>
+                                        <div class="text">That's fantastic news, John! This will definitely help us
+                                            meet our project goals and deliver an exceptional product to our clients.
+                                            Thank you for sharing the update.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">07:02</div>
+                                        </div>
+                                        <div class="text">I'm really excited about the new opportunities this funding
+                                            brings. It's a testament to our hard work and dedication. Let's make the
+                                            most of it and continue to deliver outstanding results.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item"  data-moment="option3">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw" >
+                                        <div class="speaker-info">
+                                            <div class="speaker">Emily Smith</div>
+                                            <div class="time">07:30</div><span class="tag-positive-sentiment">Positive Sentiment</span>
+                                        </div>
+                                        <div class="text">I really like the design of the UI. This is a great opportunity for us to
+                                            shine and showcase our skills. Let's continue to collaborate and innovate
+                                            as we move forward with the project.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user4.png" alt="Person 5">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Sarah Johnson</div>
+                                            <div class="time">08:00</div>
+                                        </div>
+                                        <div class="text">I have some concerns about the timeline. We might need to
+                                            adjust our deadlines to ensure quality delivery. Let's discuss this further
+                                            in the next team meeting.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user1.png" alt="Person 1">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Michael Brown</div>
+                                            <div class="time">08:30</div>
+                                        </div>
+                                        <div class="text">I agree with Sarah. Quality should be our top priority, and
+                                            we should adjust our timeline accordingly. Let's make sure we deliver a
+                                            polished product.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 2">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Mark Johnson</div>
+                                            <div class="time">09:00</div>
+                                        </div>
+                                        <div class="text">I completely agree. Quality is what sets us apart from our
+                                            competitors. Let's take the necessary steps to ensure a successful
+                                            implementation.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item" data-moment="option4">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Alex Johnson</div>
+                                            <div class="time">09:30</div>
+                                            <span class="tag-negative-sentiment">Negative Sentiment</span>
+                                        </div>
+                                        <div class="text">I think the performance could be improved. I suggest we allocate more resources to testing and
+                                            debugging to ensure a high-quality product. Let's discuss this in the next
+                                            sprint planning session.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user4.png" alt="Person 4">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Sarah Johnson</div>
+                                            <div class="time">10:00</div>
+                                        </div>
+                                        <div class="text">I agree with Jane. We should prioritize testing and
+                                            debugging to catch any potential issues early on. Let's make sure we have a
+                                            robust and reliable product.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user1.png" alt="Person 1">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Michael Brown</div>
+                                            <div class="time">10:30</div>
+                                        </div>
+                                        <div class="text">I suggest we create a dedicated testing phase in our
+                                            development process to ensure thorough testing and bug fixing. This will
+                                            help us deliver a high-quality product.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 2">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Mark Johnson</div>
+                                            <div class="time">11:00</div>
+                                        </div>
+                                        <div class="text">I agree with Michael. A dedicated testing phase will ensure
+                                            that we catch any potential issues before the product goes live. Let's
+                                            implement this in our development process.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 3">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Jane Doe</div>
+                                            <div class="time">11:30</div>
+                                        </div>
+                                        <div class="text">I suggest we involve the QA team from the beginning of the
+                                            development process to ensure comprehensive testing. Their expertise will
+                                            be invaluable in delivering a high-quality product.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user4.png" alt="Person 4">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Sarah Johnson</div>
+                                            <div class="time">12:00</div>
+                                        </div>
+                                        <div class="text">I agree with Jane. Involving the QA team from the beginning
+                                            will help us identify and address any potential issues early on. Let's
+                                            collaborate closely with them throughout the development process.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user5.png" alt="Person 5">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">John Smith</div>
+                                            <div class="time">12:30</div>
+                                        </div>
+                                        <div class="text">I think we should also consider automated testing to
+                                            streamline our testing process and improve efficiency. It can help us
+                                            catch any regressions quickly and ensure consistent quality.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 6">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Emily Davis</div>
+                                            <div class="time">13:00</div>
+                                        </div>
+                                        <div class="text">I agree with John. Automated testing can save us time and
+                                            effort in the long run. Let's explore different tools and frameworks to
+                                            implement automated tests.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user1.png" alt="Person 7">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">David Wilson</div>
+                                            <div class="time">13:30</div>
+                                        </div>
+                                        <div class="text">I suggest we allocate dedicated resources for testing to
+                                            ensure that it receives proper attention and priority. This will help us
+                                            maintain a high level of quality throughout the development process.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user3.png" alt="Person 8">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Emma Johnson</div>
+                                            <div class="time">14:00</div>
+                                        </div>
+                                        <div class="text">I agree with David. Having dedicated resources for testing
+                                            will ensure that it is not overlooked or rushed. Let's make it a priority
+                                            in our project plan.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user4.png" alt="Person 9">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">James Smith</div>
+                                            <div class="time">14:30</div>
+                                        </div>
+                                        <div class="text">I suggest we conduct regular code reviews to ensure code
+                                            quality and identify any potential issues. It can help us maintain a
+                                            high standard of coding practices.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user5.png" alt="Person 10">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Olivia Davis</div>
+                                            <div class="time">15:00</div>
+                                        </div>
+                                        <div class="text">I agree with James. Code reviews can provide valuable
+                                            feedback and help us catch any potential issues early on. Let's establish
+                                            a code review process in our development workflow.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item" data-moment="option5">
+                                    <div class="speaker-image">
+                                        <img src="img/user1.png" alt="Person 11">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Daniel Wilson</div>
+                                            <div class="time">15:30</div>
+                                            <span class="tag-currency">Currency</span>
+                                        </div>
+                                        <div class="text">The total cost is $1000. I suggest we also consider implementing continuous
+                                            integration and deployment to automate our build and deployment process.
+                                            It can help us catch any integration issues early on and ensure a smooth
+                                            release.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transcript-item">
+                                    <div class="speaker-image">
+                                        <img src="img/user2.png" alt="Person 12">
+                                    </div>
+
+                                    <div class="transcript-raw">
+                                        <div class="speaker-info">
+                                            <div class="speaker">Sophia Johnson</div>
+                                            <div class="time">16:00</div>
+                                        </div>
+                                        <div class="text">I agree with Daniel. Continuous integration and deployment
+                                            can help us streamline our development process and ensure that our
+                                            changes are properly tested and deployed. Let's explore different CI/CD
+                                            tools and practices.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+
+
+
+                                
+                            </div>  <!-- meeting transcript ends here -->  
+
+
+                            
+                        </div> <!-- meeting recap ends here -->
+
+                
+                    </div> <!-- transcript content ends here -->
+                    </div> <!-- tab content transcript ends here -->
+
+                    <div class="tab-content-quality">
+                        <div class="quality-content" id="qualityContent">
+                            <h3>Call Quality content</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nunc nec ultricies
+                                tincidunt, velit mauris tincidunt nunc, id aliquam nunc nisl id nunc. Sed auctor, nunc id
+                                aliquet lacinia, nisl nunc lacinia nunc, id aliquet nunc nisl id nunc.</p>
+                        </div>
+                    
+
+                    </div> <!-- tab content quality ends here -->
+
+                </section> <!-- main content ends here -->
+               
+
+
+            <section class="more-actions">  
+
+                <div class="actions-bottom-bar" >
+                    <div class="action1" id="showCommentsButton">
+                        <img src="img/comments.svg" alt="Comments">
+                        <span>Comments</span>
+                    </div>
+                    <div class="action2" id="showScorecardsButton">
+                        <img src="img/scorecards.svg" alt="Ai Scorecards">
+                        <span>Ai Scorecards</span>
+                    </div>
+                    <div class="action3" id="showPlaybooksButton">
+                        <img src="img/playbooks.svg" alt="Ai Playbooks">
+                        <span>Ai Playbooks</span>
+                    </div>
+                </div>
+
+                <div class="bottom-sheet" id="bottomSheet"> 
+                   
+                    <div class="tab-content-1">
+                            <div class="comments-content" id="commentsContent">
+                                <img src="img/close.svg" alt="Close" class="closeBottomSheet">
+
+
+                                <div class="comments-heading">
+                                    <p>Comments (9)<p>
+                                </div> <!-- comments header ends here -->
+
+                                 <!-- Block to add a new comment -->
+                                 <div class="add-comment">
+                                    <p class="title-comment-add-block">Add a comment</p>
+                                    <textarea class="comment-input" placeholder="@ mention others to collaborate"></textarea>
+                                    <div class="comment-actions-block">
+                                    <input class="commented-on-transcript-time" type="" step="1" value="0:00:00">                                    <button class="add-comment-button" disabled>Post</button></div>
+                                </div> <!-- add comment ends here -->
+
+
+                                <div class="comments-list">
+
+                                    <div class="comment">
+                                        <div class="comment-info">
+                                        <div class="comment-author-image">
+                                            <img src="img/user2.png" alt="Person 2">
+                                        </div>
+    
+                                        
+                                            <div class="author-info">
+                                                <div class="comment-author">Ashley Bond<div class="comment-time">Jan 31</div></div>
+                                                <span class="commented-on">02:33</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="comment-text">I have some concerns about the timeline. We might need to adjust our deadlines to ensure quality delivery. Let's discuss this further in the next team meeting. This discussion on user interface layout and color scheme selection.
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    
+
+                                   
+
+                                    
+
+                                
+
+                                    
+
+                                    
+
+                                                                            
+                                 </div> <!-- comments list ends here -->
+
+                                
+
+                             </div> <!-- comments content ends here -->
+
+                    </div> <!-- tab-content-1 ends here -->
+                                
+                    <div class="tab-content-2">
+                                <div class="ai-scorecards-content" id="aiScorecardsContent">
+                                    
+                                    <img src="img/close.svg" alt="Close" class="closeBottomSheet">
+                                    <h1>AI Scorecards content</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nunc nec ultricies
+                                        tincidunt, velit mauris tincidunt nunc, id aliquam nunc nisl id nunc. Sed auctor, nunc id
+                                        aliquet lacinia, nisl nunc lacinia nunc, id aliquet nunc nisl id nunc.</p>
+                                        
+                                </div> <!-- ai scorecards content ends here -->
+                                
+                    </div> <!-- tab content-2 ends here -->
+
+
+
+                    <div class="tab-content-3">
+                                <div class="ai-playbooks-content" id="aiPlaybooksContent">
+                                    
+                                    <img src="img/close.svg" alt="Close" class="closeBottomSheet">
+                                    <h1>AI Playbooks content</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet, nunc nec ultricies
+                                        tincidunt, velit mauris tincidunt nunc, id aliquam nunc nisl id nunc. Sed auctor, nunc id
+                                        aliquet lacinia, nisl nunc lacinia nunc, id aliquet nunc nisl id nunc.</p>
+                                    
+                                </div> <!-- ai playbooks content ends here -->
+                                
+                    </div> <!-- tab content-3 ends here -->
+                
+            </div> <!-- bottom sheet ends here -->
+
+            </section> <!-- more actions ends here -->
+        </section> <!-- grid for web ends here -->
+
+            
+
+        </div> <!-- container ends here -->
+        
+        
+
+    </main> <!-- main ends here -->
+    <a href="#" class="back-to-top" style="display: none;">Back to Top</a>
+  
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

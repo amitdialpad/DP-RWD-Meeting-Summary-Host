@@ -1,0 +1,1100 @@
+$primary-color: #fff;
+$secondary-color: #3A3A3A;
+$surface-secondary: #F9F9F9;
+$brand-color: #7C52FF;
+$divider: 1px solid #00000018;
+$divider-vertical: 1px solid #00000035;
+
+body {
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.header-content {
+    display: flex;
+    //align-items: center; 
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: $divider;
+    background-color: $surface-secondary;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end; // Fix vertical alignment of the logo image
+}
+
+.logout-button {
+    background-color: #ffffff;
+    color: $brand-color;
+    padding: 0.3rem .8rem;
+    border-radius: 0.25rem;
+    cursor: pointer; 
+    border: 1px solid $brand-color;
+}
+
+.call-heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0rem;
+
+}
+
+.call-subheading {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $secondary-color;
+    display: block;
+    padding-top: 0.3rem;
+
+}   
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0 1rem 1rem;
+    gap: 1rem;
+    border-bottom: $divider;
+}
+
+// More icon styles 
+
+.more-icon {
+    position: relative; // Ensure the icon remains in place
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.icon-container {
+    display: none;
+    position: fixed;
+    right: 24px;
+    width: 240px;
+    background-color: #F9F9F9;
+    padding: 0rem;
+    box-sizing: border-box;
+    z-index: 999;
+    border-radius: 8px;
+    box-shadow: 1px 2px 4px #d3cccc;
+}
+
+.icon-container.show {
+    display: flex; // Show the icon container when "More" icon is clicked
+    flex-direction: column;
+}
+
+.action-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-bottom: $divider;
+    
+}
+
+.share-button {
+    background-color: #7C52FF;
+    cursor: pointer;
+    border: 1px solid #7C52FF;
+    position: fixed;
+    bottom: 5rem;
+    right: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-button .icon {
+    width: 2.4rem; 
+    height: 2.4rem;
+
+}
+
+.action-option-share {
+    display: none;
+}
+
+#meetingVideo {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    
+}
+
+.meeting-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    border-bottom: $divider;
+    background-color: #000000;
+}
+
+.tab-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    border-bottom: $divider;
+    padding-bottom: 0;
+    top: 0; 
+    overflow-x: auto; // Needs to scroll horizontal scrolling
+    white-space: nowrap; 
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+    border-bottom: 2px solid $brand-color;
+}
+
+
+.tab-number {
+    border-radius: 50%;
+    background-color: #E0E0E0;
+    color: #0000008e;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: .3rem;
+}
+
+.tab-content-recap {
+    padding: 0 1rem 1rem 1rem;
+    //border-bottom: $divider;
+    margin-bottom: 3rem;
+    
+}
+
+.tab-content-transcript{
+    margin-bottom: 5rem;
+    padding: 0;
+    position: relative;
+    margin-top: -4rem;
+}
+
+
+
+
+.action-items-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 0;
+    overflow: hidden; // Prevent content from overflowing
+}
+
+.actions-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: stretch;
+    align-items: center;
+    background-color: $surface-secondary;
+    border-top: $divider;
+}
+
+.action1, .action2, .action3 {
+    display: flex;
+    cursor: pointer;
+    border-right: 1px solid #00000018;
+    //padding-top: 0.4rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+.action1 img, .action2 img, .action3 img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.action1 img:hover, .action2 img:hover, .action3 img:hover {
+    background-color: #7d52ff29;
+    border-radius: 100%;
+}
+
+
+
+
+.action1 span, .action2 span, .action3 span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $secondary-color;
+}
+
+.action3 {
+    border-right: none;
+}
+
+
+// Bottom sheet styles
+.bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    background-color: $primary-color;
+    padding-bottom: 3rem;
+    transition: transform 0.3s ease-in-out; // Add transition property for smooth animation
+
+    &.closed {
+        transform: translateY(100%); // Reverse transition when sheet is dismissed
+       
+    }
+}
+
+
+.tab-content-1, .tab-content-2, .tab-content-3 {
+    // later add something here if needed, leaving it for nw
+}
+
+.comments-content, .ai-scorecards-content, .ai-playbooks-content {
+   padding: 1rem;
+   
+}
+
+.more-actions {
+    display: block;
+}
+
+//styles for the filters dropdown with check in front of the options
+
+
+.dropdown-check-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    position: relative;
+
+
+}
+
+.transcript-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    //margin-bottom: 1rem;
+    border-bottom: $divider;
+    padding: 1rem;
+    //background-color: $surface-secondary;
+
+}
+
+.dropdown-check-list .anchor {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    padding: 5px;
+    padding-left: 8px;
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    border-radius: 0.4rem;
+    background-color: $surface-secondary;
+    white-space: nowrap; 
+    
+}
+
+.dropdown-check-list.visible .anchor {
+    background-color: #7c52ff40; // Change the background color to brand color when dropdown is open
+    
+}
+
+.dropdown-check-list ul.items {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    font-size: 0.8rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    width: max-content;
+    z-index: 99;
+    background-color: $primary-color;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-left: 0;
+    padding: 8px;
+    top: 0;
+    
+}
+
+.dropdown-check-list ul.items li {
+    list-style: none;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+  
+.dropdown-check-list.visible .items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+
+.dropdown-check-list ul.items li input[type="checkbox"] {
+        margin-right: 0.5rem;
+}
+
+.dropdown-check-list ul.items li label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+.dropdown-check-list ul.items li label input[type="checkbox"] {
+        margin-right: 0.5rem;
+    }
+
+.badge {
+    color: $brand-color;
+    padding: 0.5rem 1.2rem 0.5rem 0.3rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    position: relative;
+    min-width: max-content;
+    max-width: 200px;
+    margin-right: 10px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border: 1px solid #00000018;
+    
+}
+
+.closeButton {
+    position: absolute;
+    right: 2px;
+    top: 11px;
+    cursor: pointer;
+    padding-left: 0px;
+    background-color: $surface-secondary;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.selected-options-container {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    
+}
+
+.helper-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $secondary-color;
+
+
+}
+
+
+
+//moments capsules 
+.moment {
+    min-width: 160px; // Fix the width
+    border: 1px solid #0000001A;
+    margin: 0.5rem;
+    margin-bottom: 0;
+    padding: .8rem;
+    border-radius: 8px;  
+    position: relative;
+    display: block;
+    max-width: 160px;
+    width: 160px;
+    cursor: pointer;
+
+
+
+    .text {
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        }
+    
+    
+}
+
+.moment.selected {
+    background-color: #f6f3ff;
+}
+
+
+
+.moment-item.active {
+    background-color: #f1edfe;
+    color: #FFFFFF;
+}
+
+.moments {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; // Enable horizontal scroll
+    top: 0; // Position it at the top
+    background-color: #FFFFFF; // Add a background color if needed
+    z-index: 1; // Set a higher z-index to ensure it's on top of other elements
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    position: sticky;
+    
+   
+}
+
+.meeting-recap {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.speaker {
+    display: flex;
+    white-space: nowrap;
+    align-items: baseline;
+    
+    .speaker-name {
+        font-size: 0.8rem;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .time {
+        font-size: 0.7rem;
+        margin-left: 0rem;
+        padding-left: .2rem;
+        columns: #555555;
+    }
+
+   
+
+}
+
+.tag {
+    display: inline-block;
+    padding: 1px 4px;
+    font-size: 0.6rem;
+    background-color: #E0E0E0;
+    border: 1px solid 000000;
+    border-radius: 4px;
+    margin-left: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #0000008e;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+}
+
+
+
+.tag-action-item {
+    background-color: #fff5d0;
+    color: #000000;
+    font-size: 0.6rem;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 1px 4px;
+    margin-left: .5rem;
+    border: 1px solid #ffe480;
+
+}
+
+.tag-interesting-question {
+    background-color: #c7d5ff;
+    color: #000000;
+    border: 1px solid #88a6ff;
+    font-size: 0.6rem;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 1px 4px;
+    margin-left: .5rem;
+}
+
+.tag-positive-sentiment {
+    background-color: #cffccf;
+    color: #000000;
+    border: 1px solid #9afb9a;
+    font-size: 0.6rem;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 1px 4px;
+    margin-left: .5rem;
+}
+
+.tag-negative-sentiment {
+    background-color: #ffdfc9;
+    color: #000000;
+    border: 1px solid #ffb584;
+    font-size: 0.6rem;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 1px 4px;
+    margin-left: .5rem;
+}
+
+.tag-currency {
+    background-color: #c2fdff;
+    color: #000000;
+    border: 1px solid #95fbff;
+    font-size: 0.6rem;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 1px 4px;
+    margin-left: .5rem;
+}
+
+
+
+
+
+
+.meeting-transcript {
+    .transcript-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        padding: .5rem;
+        border: 1px solid #0000000f;
+        border-radius: 8px;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        //background-color: $surface-secondary;
+        
+        
+        
+
+
+        .speaker-image {
+            width: auto;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .speaker-info {
+            display: flex;
+            flex-direction: row;
+            margin-right: 1rem;
+            align-items: center;
+            justify-content: flex-start;
+
+
+            .speaker {
+                font-size: 0.9rem;
+                font-weight: 700;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .time {
+                font-size: 0.7rem;
+                color: #555555;
+            }
+            
+            .text {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+         
+        }
+    }
+}
+
+
+.highlight {
+    background-color: #f6f3ff;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+
+//comments styles 
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    //gap: 1rem;
+    //padding: 1rem;
+    padding-top: 0;
+    overflow: hidden;
+
+}
+
+.comment {
+    //display: flex;
+    //align-items: flex-start;
+   // margin-bottom: 2rem;
+   //border-bottom: 1px solid #00000018;
+   padding-bottom: 1rem;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.comment-author-image {
+
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.comment-author {
+    font-size: .9rem;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.comment-time {
+    font-size: 0.6rem;
+    color: #555555;
+    font-weight: 400;
+
+}
+
+.comment-text {
+    font-size: .9rem;
+    margin-top: .3rem;
+}
+
+.commented-on {
+    background-color: #979797;
+    color: $primary-color;
+    border-radius: 0.25rem;
+    font-size: 0.6rem;
+    font-weight: 500;
+    min-width: max-content;
+    border: 1px solid #00000018;
+    padding: .1rem;
+    display: block;
+    width: max-content;
+
+
+}
+
+.commented-on:hover {
+    background-color: #7c52ff;
+    color: $primary-color;
+    cursor: pointer;
+}
+
+.closeBottomSheet {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: $surface-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.comments-heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 1rem 0 0;
+
+}
+
+.add-comment {
+    position: relative
+   
+}
+
+.title-comment-add-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+    
+.comment-input {
+    width: 96%;
+    padding: 0.5rem;
+    border: 1px solid #00000018;
+    border-radius: 0.25rem;
+    //margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    resize: none;
+}
+
+.commented-on-transcript-time {
+    font-size: 0.8rem;
+    color: #555555;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    background-color: #f4f4f4;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    width: 48px;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #80808054;
+    padding: 0 .5rem;
+}
+
+.add-comment-button {
+    background-color: #7C52FF;
+    color: #FFFFFF;
+    padding: 0.3rem .8rem;
+    border-radius: 0.25rem;
+    cursor: pointer; 
+    border: 1px solid #7C52FF;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    align-self: flex-end;
+
+    .add-comment-button:hover {
+        background-color: #7C52FF;
+        color: #FFFFFF;
+    }
+
+    .add-comment-button:disabled {
+        background-color: #f4f4f4;
+        color: #555555;
+        cursor: not-allowed;
+    }
+}
+
+.comment-actions-block {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+}
+
+#resetFilterLink {
+    color: $brand-color;
+    font-size: .8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $brand-color;
+        text-decoration: underline;
+        }
+
+        
+    }
+
+// Tablet styles
+@media (min-width: 768px) and (max-width: 1023px) {
+    .comment-input {
+        width: 98%;
+    }
+}
+
+// Desktop styles
+@media (min-width: 1024px) {
+
+
+    .more-icon {
+        display: none; /* Initially hidden for larger screens */
+        cursor: pointer;
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    
+    .icon-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: $primary-color;
+        border: 0;
+        justify-content: flex-end;
+        box-shadow: none
+    }
+
+    .action-option {
+        border-bottom: none;
+    }
+
+    
+    .icon {
+        margin: 0 5px;
+        width: 36px; 
+        height: 36px; 
+    }
+
+    .icon-copy, .icon-easy-read {
+        display: none;
+    }
+
+
+    .icon-share {
+            color: $primary-color;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+    .action-option-share:hover {
+            background-color: darken($brand-color, 10%);
+            cursor: pointer;
+        }
+
+    .icon-copy-share {
+        display: block;
+    }
+
+    .action-option-share {
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 15px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border-bottom: $divider;
+        background-color: $brand-color;
+        color: $primary-color;
+        border-radius: 1rem;
+        
+    }
+
+    #ShareButton {
+        display: none;
+    }
+
+
+    .action1 span, .action2 span, .action3 span {
+        display: none;
+    }
+
+
+
+    .actions-bottom-bar {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 3rem;
+        width: 3rem;
+        border: none;
+        background-color: $surface-secondary;
+        height: 100vh;
+        min-height: 100%;
+        border: $divider;
+        border-left: 0;
+        border-top: 0;
+    }
+
+    .grid-for-web {
+        display: flex;
+        //border-top: $divider;
+        flex-direction: row;
+    }
+    
+    .action1, .action2, .action3 {
+        flex: 0;
+        border-right: none;
+    }
+
+    .more-action {
+        display: contents;
+        height: 100%;
+        width: 300px;
+    }
+
+    .bottom-sheet {
+        transform: translateX(0);
+        position: relative;
+        bottom: 0;
+        background-color: $primary-color;
+        border: $divider;
+        border-right: 0;
+        border-bottom: 0;
+        border-top: 0;
+    }
+
+
+    .more-actions {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .comments-content, .ai-scorecards-content, .ai-playbooks-content {
+        padding: 1rem;
+        width: 300px;
+        
+    }
+
+    //moments 
+    .moments {
+        flex-direction: column;
+        max-width: 320px;
+        overflow-x: unset;
+        gap: .5rem;
+        padding-right: .5rem;
+        position: sticky;
+    }
+
+    .moment-item {
+        flex: 0 0 30%;
+    }
+
+    .meeting-recap {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .meeting-transcript 
+        .transcript-item {
+            margin-left: 0;
+        
+        }
+
+
+
+     .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #f6f3ff;
+            color: #000000;
+            padding: .5rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            border: $divider;
+            border-left: 0;
+            font-size: 0.8rem;
+            z-index: 9999;
+            box-shadow:rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        }
+
+        .back-to-top.show {
+            display: block;
+        }
+
+        .back-to-top:hover {
+            background-color: $brand-color;
+            color: $primary-color;
+        }
+
+        .action1, .action2, .action3 {
+            padding-top: 1rem;
+
+        }
+
+        #meetingVideo {
+            width: 36%;
+            //margin: 1rem;
+            border-radius: 8px;
+            //padding: 1rem;
+
+        }
+
+        .meeting-video {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            padding: 1rem;
+            border-bottom: $divider;
+            background-color: #ffffff;
+        }
+
+        #meetingVideo:hover {
+            cursor: nwse-resize;
+        }
+    
+
+}

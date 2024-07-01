@@ -1,0 +1,19 @@
+{
+  "name": "dp-rwd-meeting-summary-host",
+  "version": "1.0.0",
+  "description": "responsive meeting summary page for host - Calls",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [
+    "meeting-summary"
+  ],
+  "author": "Amit Ayre",
+  "license": "MIT",
+  "dependencies": {
+    "@dialpad/dialtone": "^8.22.1",
+    "less": "^4.2.0",
+    "node-sass": "^9.0.0"
+  }
+}

@@ -1,1 +1,1 @@
-Meeting summary view for host - Dialpad calls 
+Meeting summary view for host - Dialpad meetings 
